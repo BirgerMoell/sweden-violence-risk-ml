@@ -1,0 +1,6 @@
+seed: 20260718
+n_people: 5000
+landmarks_per_person: 4
+external_region: north
+temporal_cutoff: "2024-01-01"
+output_dir: output/demo

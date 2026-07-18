@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An open Swedish protocol for responsible external validation of violence prediction models.">
+  <title>SÄKER-ML Sweden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">SÄKER–ML</a>
+    <nav aria-label="Primary"><a href="#design">Design</a><a href="#gates">Gates</a><a href="#principles">Principles</a></nav>
+    <a class="nav-cta" href="../output/pdf/proposed-study.pdf">Study PDF</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="orb orb-a"></div><div class="orb orb-b"></div>
+      <div class="hero-copy reveal visible">
+        <p class="eyebrow">A Swedish open-science study blueprint</p>
+        <h1>Prediction must earn<br>the right to be useful.</h1>
+        <p class="lede">A calibration-first, externally validated study of short-term interpersonal violence risk in specialist psychiatric care—with safety gates before any clinical use.</p>
+        <div class="actions"><a class="button primary" href="../output/pdf/proposed-study.pdf">Read the proposal</a><a class="button text" href="https://github.com/BirgerMoell/sweden-violence-risk-ml">View the code <span>↗</span></a></div>
+      </div>
+      <div class="finding reveal delay visible">
+        <div><strong>31/38</strong><span>reviewed studies at high risk of bias</span></div>
+        <div><strong>3</strong><span>studies with external validation</span></div>
+        <div><strong>0</strong><span>models recommended for implementation</span></div>
+      </div>
+      <a class="source-note" href="https://doi.org/10.1016/j.jcrimjus.2026.102697">Kozhevnikova et al., 2026 ↗</a>
+    </section>
+
+    <section id="design" class="thesis section reveal">
+      <p class="section-label">The study question</p>
+      <h2>Can routinely available information estimate 30-day risk—and remain calibrated in another Swedish region and a later year?</h2>
+      <p>The primary model is a transparent penalised landmark regression. More complex ML must prove added value in the same untouched validation sets, not merely win on AUC.</p>
+    </section>
+
+    <section class="architecture section">
+      <div class="architecture-copy reveal"><p class="section-label">Architecture</p><h2>Separate development from proof.</h2><p>People never cross partitions. Every predictor must be available before its landmark. The external region and future period stay sealed until the model and analysis are frozen.</p></div>
+      <div class="flow reveal">
+        <div><span>01</span><strong>Earlier years</strong><small>Multi-region development</small></div>
+        <i></i><div><span>02</span><strong>New region</strong><small>Geographic validation</small></div>
+        <i></i><div><span>03</span><strong>Later year</strong><small>Temporal validation</small></div>
+        <i></i><div><span>04</span><strong>Silent run</strong><small>No scores displayed</small></div>
+      </div>
+    </section>
+
+    <section id="gates" class="gates section">
+      <p class="section-label reveal">Decision gates</p>
+      <h2 class="reveal">A strong AUROC cannot open the door.</h2>
+      <div class="gate-list">
+        <article class="reveal"><span>01</span><h3>Calibration</h3><p>Predicted probabilities match observed risk across region, time, and care setting.</p></article>
+        <article class="reveal"><span>02</span><h3>Net benefit</h3><p>The model improves decisions over current practice without an untenable alert burden.</p></article>
+        <article class="reveal"><span>03</span><h3>Equity</h3><p>Subgroup performance and uncertainty reveal no unresolved material harm.</p></article>
+        <article class="reveal"><span>04</span><h3>Safety</h3><p>Patients, clinicians, security, ethics, and independent oversight all approve progression.</p></article>
+      </div>
+    </section>
+
+    <section id="principles" class="principles section">
+      <div class="quote reveal"><blockquote>“Research only” is not a footnote. It is the operating mode until benefit is demonstrated prospectively.</blockquote></div>
+      <div class="rules reveal"><p class="section-label">Non-negotiable</p><ul><li>No automated decisions</li><li>No policing or sentencing</li><li>No denial of care</li><li>No public patient data or fitted weights</li><li>No deployment by default</li></ul></div>
+    </section>
+
+    <section class="cta section reveal"><p class="section-label">Open for scrutiny</p><h2>Read the assumptions.<br>Test the code. Challenge the design.</h2><div class="actions"><a class="button primary" href="../docs/STUDY_PROTOCOL.md">Study protocol</a><a class="button text" href="../docs/ML_PLAN.md">ML plan →</a></div></section>
+  </main>
+  <footer><span>SÄKER-ML Sweden · Proposal v0.1 · 18 July 2026</span><span>Code MIT · Documents CC BY 4.0</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
